@@ -1,0 +1,1 @@
+# agrogestion-assets
