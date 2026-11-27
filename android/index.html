@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e5236">
+  <title>AGROGESTION</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-192.png">
+  <style>
+    * { box-sizing:border-box }
+    body { margin:0; min-height:100dvh; display:grid; place-items:center; padding:1.25rem;
+      background:#eff8f2; color:#15392b; font:1rem/1.45 system-ui,sans-serif }
+    main { width:min(100%,26rem); padding:1.5rem; background:#fff; border:1px solid #d6e8da; border-radius:1.25rem }
+    h1 { margin:.35rem 0 1.4rem; font-size:1.65rem }
+    img { border-radius:1rem }
+    label { display:block; font-weight:700 }
+    input,button,a { font:inherit; border-radius:.55rem }
+    input { min-height:2.8rem; margin:.35rem 0 .8rem; padding:.6rem; width:100%; border:1px solid #8bab99 }
+    button,a { min-height:2.8rem; padding:.65rem .9rem; border:1px solid #0e5236; cursor:pointer }
+    .primario { display:block; width:100%; text-align:center; color:white; background:#0e5236; font-weight:700; text-decoration:none }
+    .secundario { margin-top:.7rem; color:#0e5236; background:white }
+    [hidden] { display:none !important }
+    [role=status]:empty { display:none }
+  </style>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <img src="icon-192.png" alt="" width="72" height="72">
+    <h1>AGROGESTION</h1>
+    <a id="abrir" class="primario" hidden>Abrir AGROGESTION</a>
+    <button id="cambiar" type="button" class="secundario" hidden>Cambiar dirección</button>
+    <form>
+      <label for="direccion">Dirección de la aplicación</label>
+      <input type="url" id="direccion" inputmode="url" autocomplete="off" required>
+      <button class="primario">Guardar dirección</button>
+    </form>
+    <button id="instalar" type="button" class="secundario" hidden>Instalar en Android</button>
+    <p id="ayuda">En Chrome, abre el menú y elige «Instalar aplicación» o «Añadir a pantalla de inicio».</p>
+    <p role="status"></p>
+  </main>
+</body>
+</html>
